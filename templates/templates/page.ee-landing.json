@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "ee-hero-banner": {
+      "type": "ee-hero-banner",
+      "settings": {}
+    },
+    "ee-product-grid": {
+      "type": "ee-product-grid",
+      "settings": {}
+    }
+  },
+  "order": [
+    "ee-hero-banner",
+    "ee-product-grid"
+  ]
+}
