@@ -2,3 +2,64 @@
 <section class="ee-grid">
 <div class="ee-grid_placeholder">EE Product Grid (placeholder) </div>
 </section>
+
+{% schema %}
+{
+    "name": "EE ",
+    "settings":[
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "choose collection",
+           
+        }
+       
+    ]
+}
+{% endSchema %}
+
+<section class="ee-product-grid">
+<div class="grid-wrapper" >
+{% for product in collections[section.settings.collection].products %}
+<div class="grid-item">
+<a href="{{ product.url }}">
+<img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title}}">
+<h3>{{ product.title}</h3>
+<p>{{ product.price | money}}}
+</a>
+</div>
+{% endfor %}
+</div>
+
+</section>
+
+<style>
+.ee-product-grid .grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ee-product-grid .grid-item{
+   border: 1px solid #eee;
+   padding: 10px;
+   text-align: center;
+
+}
+.ee-product-grid img{
+        width: 100%;
+        border-radius: 8px;
+    }
+@media (max-width: 480px) {
+    .ee-product-grid .grid-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px){
+    .ee-product-grid .grid-wrapper{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+</style>
+
