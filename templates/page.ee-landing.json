@@ -1,25 +1,18 @@
 {
-"name": "EE" . Landing[D[D[D[D[D[D[D[[C[C[C[C[C[C[C[C[C[C[C[C[C[CLanding",
-"sections":{
-"ee-hero":{"type": "ee-hero-banner", "settings": {} },
-"ee-grid": {"type": "ee-product",[D[D-grid[", "settings": {} }
-},
-"order": ["ee-hero","ee-grid"]
+    "sections":{
+        "ee-hero-banner":{
+            "type": "ee-hero-banner",
+            "settings": {}
+        },
+        "ee-product-grid":{
+            
+            "type": "ee-product-grid",
+            "settings": {}
+
+        }
+    },
+    "order":[
+        "ee-hero-banner",
+        "ee-product-grid"
+    ]
 }
-EOF
-
-
-
-
-
-
-
-
-
-[A[A[A[A[A[A[A[A[A[A[C[C[C
-
-
-
-
-
-
